@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palabras clave de licitación — todas las líneas de negocio CONECTA</title>
+<style>
+:root{
+  --fondo:#0d1117; --panel:#151b23; --panel2:#1b2330; --linea:#26303d; --txt:#e6edf3; --tenue:#8b98a8;
+  --azul:#3fb6ff; --violeta:#8b5cf6; --ambar:#f5a524; --verde:#3fb950; --rojo:#f85149;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fondo);color:var(--txt);
+  font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif}
+.wrap{max-width:1140px;margin:0 auto;padding:26px 20px 90px}
+header.tapa{border-bottom:1px solid var(--linea);padding-bottom:20px;margin-bottom:22px}
+.marca{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--azul);font-weight:600}
+h1{font-size:30px;margin:6px 0 6px;font-weight:650;letter-spacing:-.02em}
+.bajada{color:var(--tenue);font-size:14px;max-width:820px}
+.cifras{display:flex;gap:26px;margin-top:16px;flex-wrap:wrap}
+.cifra b{display:block;font-size:22px;font-weight:650}
+.cifra span{font-size:12px;color:var(--tenue);text-transform:uppercase;letter-spacing:.08em}
+.buscador{position:sticky;top:0;z-index:20;background:var(--fondo);padding:14px 0;border-bottom:1px solid var(--linea);margin-bottom:18px}
+.buscador input{width:100%;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;
+  color:var(--txt);padding:12px 14px;font-size:15px;outline:none}
+.buscador input:focus{border-color:var(--azul)}
+.ayuda{font-size:12px;color:var(--tenue);margin-top:6px}
+section.grupo{margin:26px 0 10px}
+section.grupo h2{font-size:19px;margin:0 0 4px;font-weight:650;border-left:3px solid var(--acc-grupo);padding-left:10px}
+.grupo .desc{color:var(--tenue);font-size:13px;margin:0 0 12px;padding-left:13px}
+details.linea{border:1px solid var(--linea);border-radius:12px;background:var(--panel);margin:0 0 10px;overflow:hidden}
+details.linea>summary{cursor:pointer;padding:14px 16px;display:flex;justify-content:space-between;gap:14px;
+  align-items:baseline;list-style:none}
+details.linea>summary::-webkit-details-marker{display:none}
+details.linea[open]>summary{border-bottom:1px solid var(--linea)}
+details.linea>summary .nom{font-weight:600;font-size:16px}
+details.linea>summary .nom::before{content:"▸";color:var(--acc-grupo);margin-right:9px;display:inline-block;transition:transform .15s}
+details.linea[open]>summary .nom::before{transform:rotate(90deg)}
+details.linea>summary .meta{color:var(--tenue);font-size:12px;white-space:nowrap}
+.cuerpo{padding:4px 16px 18px}
+.resumen{color:var(--tenue);font-size:13.5px;margin:10px 0 14px}
+.blk{margin:0 0 16px}
+.blk .t{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--tenue);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.kw,.cp{background:var(--panel2);border:1px solid var(--linea);color:var(--txt);border-radius:8px;
+  padding:7px 11px;font:13px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;cursor:pointer;text-align:left}
+.kw:hover,.cp:hover{border-color:var(--azul)}
+.kw i{color:var(--tenue);font-size:10px;margin-left:7px;font-style:normal;text-transform:uppercase;letter-spacing:.06em}
+.kw.cat{border-left:3px solid var(--verde)}
+.kw.prod{border-left:3px solid var(--azul)}
+.kw.old{border-left:3px solid var(--ambar)}
+.kw.dol{border-left:3px solid var(--violeta)}
+.kw.comp{border-left:3px solid var(--verde)}
+.kw.hecho,.cp.hecho{border-color:var(--verde);color:var(--verde)}
+.q{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px dashed var(--linea)}
+.q:last-child{border-bottom:0}
+.qk{flex:0 0 195px;color:var(--tenue);font-size:12.5px}
+code{flex:1;font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--azul);overflow-wrap:anywhere}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th{text-align:left;color:var(--tenue);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:7px 8px;border-bottom:1px solid var(--linea)}
+td{padding:9px 8px;border-bottom:1px solid var(--linea);vertical-align:top}
+.fid{font:12px ui-monospace,monospace;color:var(--azul)}
+.alt{color:var(--tenue);font-size:11.5px;margin-top:2px}
+.ver{font-size:10.5px;padding:2px 7px;border-radius:20px;border:1px solid;white-space:nowrap}
+.ver.ok{color:var(--verde);border-color:var(--verde)}
+.ver.no{color:var(--ambar);border-color:var(--ambar)}
+.portal{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border:1px solid var(--linea);border-radius:8px;
+  color:var(--txt);text-decoration:none;font-size:13px}
+.portal:hover{border-color:var(--azul);color:var(--azul)}
+.pie{font-size:12px;color:var(--tenue);margin:8px 0 0}
+.vacio{font-size:12.5px;color:var(--tenue);font-style:italic}
+.leyenda{border:1px solid var(--linea);border-radius:12px;background:var(--panel);padding:16px 18px;margin:0 0 8px}
+.leyenda p{margin:0 0 12px;font-size:13.5px;color:var(--tenue)}
+.leyenda p b{color:var(--txt)}
+footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--linea);color:var(--tenue);font-size:12px}
+footer code{color:var(--tenue)}
+.oculto{display:none !important}
+.marca-coincide{outline:1px solid var(--azul);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="tapa">
+  <div class="marca">CONECTA · Inteligencia comercial</div>
+  <h1>Palabras clave de licitación, por línea de negocio</h1>
+  <p class="bajada">Cómo nombrar cada línea para encontrar oportunidades: la categoría con que el cliente
+  la licita, el producto que aparece en las bases técnicas y el equipo que hoy tiene instalado. Las líneas
+  de red y cumplimiento CEN vienen del clasificador real de Odoo; las de proceso y planta SUPCON, del
+  catálogo de producto. Cada palabra sale de un archivo citado al pie.</p>
+  <div class="cifras">
+    <div class="cifra"><b>25</b><span>líneas de negocio</span></div>
+    <div class="cifra"><b>16</b><span>de red y cumplimiento</span></div>
+    <div class="cifra"><b>9</b><span>de proceso y planta</span></div>
+    <div class="cifra"><b>278</b><span>consultas listas</span></div>
+  </div>
+</header>
+
+<div class="buscador">
+  <input id="filtro" type="search" placeholder="Filtrar líneas o palabras: RTU, válvulas, obsolescencia, Foxboro…" autocomplete="off">
+  <div class="ayuda" id="ayuda">Escriba para filtrar. Cada línea se abre con un clic y cada palabra tiene su botón para copiar.</div>
+</div>
+
+<section class="leyenda">
+  <div class="t" style="font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--tenue);margin-bottom:10px">Lo que hay que entender antes de buscar</div>
+  <p><b>El cliente no busca el nombre del producto.</b> Licita por familia de compra («Sistemas de Control»,
+  «Instrumentos de Medición, Supervisión, Indicación, Calibración y Control», «Accionamiento y Control») y
+  recién nombra el modelo en la especificación técnica. Buscar «ECS-700» o «Orion» en un portal de licitaciones
+  devuelve casi nada; buscar la familia devuelve las bases.</p>
+  <p><b>La frase que más rinde es obsolescencia declarada + sistema cerrado.</b> Un cliente que escribió
+  «los sistemas de control están obsoletos» y «no se pueden modificar los parámetros» ya confesó el reemplazo.
+  Esas frases se buscan junto al nombre de la empresa, no junto al producto.</p>
+  <div class="blk">
+    <div class="t">Frases de dolor — se combinan con el nombre del cliente</div>
+    <div class="chips"><button class="kw dol" data-kw="sistemas de control obsoletos">sistemas de control obsoletos<i>copiar</i></button><button class="kw dol" data-kw="sin soporte del fabricante">sin soporte del fabricante<i>copiar</i></button><button class="kw dol" data-kw="fin de vida útil">fin de vida útil<i>copiar</i></button><button class="kw dol" data-kw="obsolescencia tecnológica">obsolescencia tecnológica<i>copiar</i></button><button class="kw dol" data-kw="no hay repuestos">no hay repuestos<i>copiar</i></button><button class="kw dol" data-kw="código cerrado">código cerrado<i>copiar</i></button><button class="kw dol" data-kw="sistema propietario">sistema propietario<i>copiar</i></button></div>
+  </div>
+  <div class="blk" style="margin-bottom:0">
+    <div class="t">Frases de compra — categorías con que se licita</div>
+    <div class="chips"><button class="kw comp" data-kw="instrumentos de control">instrumentos de control<i>copiar</i></button><button class="kw comp" data-kw="automatización y control">automatización y control<i>copiar</i></button><button class="kw comp" data-kw="sistemas de control">sistemas de control<i>copiar</i></button><button class="kw comp" data-kw="mantenimiento de sistemas SCADA">mantenimiento de sistemas SCADA<i>copiar</i></button><button class="kw comp" data-kw="renovación tecnológica">renovación tecnológica<i>copiar</i></button><button class="kw comp" data-kw="upgrade del sistema de control">upgrade del sistema de control<i>copiar</i></button><button class="kw comp" data-kw="migración de plataforma de control">migración de plataforma de control<i>copiar</i></button></div>
+  </div>
+</section>
+
+<section class="leyenda">
+  <div class="t" style="font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--tenue);margin-bottom:10px">Dónde buscar</div>
+  <a class="portal" href="https://www.mercadopublico.cl" target="_blank" rel="noopener">Mercado Público — compras del Estado</a><a class="portal" href="https://www.codelco.com" target="_blank" rel="noopener">Codelco — Abastecimiento</a><a class="portal" href="https://www.coordinador.cl" target="_blank" rel="noopener">CEN — Coordinador Eléctrico Nacional</a><a class="portal" href="https://infotecnica.coordinador.cl" target="_blank" rel="noopener">Infotécnica CEN</a><a class="portal" href="https://www.sec.cl" target="_blank" rel="noopener">SEC — Superintendencia de Electricidad y Combustibles</a><a class="portal" href="https://seia.sea.gob.cl" target="_blank" rel="noopener">SEIA — Evaluación ambiental de proyectos</a><a class="portal" href="https://www.bhp.com" target="_blank" rel="noopener">BHP — Proveedores</a><a class="portal" href="https://www.aminera.cl" target="_blank" rel="noopener">Antofagasta Minerals</a>
+</section>
+
+<div id="grupos">
+
+  <section class="grupo" style="--acc-grupo:#3fb6ff">
+    <h2>Red eléctrica y cumplimiento CEN</h2>
+    
+      <details class="linea" data-buscar="pmu clave interna: pmu. equipos tipicos: gps kronos (2r/2p), pmu vizimax, licencia pdc corporativo/local, elpros, switch hermes, importacion gps/novatech pmu sel-2032 sel rtu">
+        <summary>
+          <span class="nom">PMU</span>
+          <span class="meta">1 producto · 2 instalado · 6 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: pmu. Equipos típicos: GPS Kronos (2R/2P), PMU Vizimax, Licencia PDC Corporativo/Local, Elpros, Switch Hermes, Importación GPS/Novatech</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="PMU">PMU<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="pmu">pmu<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="SEL-2032">SEL-2032<i>copiar</i></button><button class="kw old" data-kw="SEL RTU">SEL RTU<i>copiar</i></button></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pmu&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pmu&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pmu&quot; licitación Chile</code><button class="cp" data-kw="&quot;pmu&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SEL-2032&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SEL-2032&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SEL-2032&quot; Chile licitación</code><button class="cp" data-kw="&quot;SEL-2032&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SEL RTU&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SEL RTU&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SEL RTU&quot; Chile licitación</code><button class="cp" data-kw="&quot;SEL RTU&quot; Chile licitación">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F01</span></td>
+              <td>instrumentos de control<div class="alt">Instrumentos de Medición, Supervisión, Indicación, Calibración y Control</div></td>
+              <td>transmisores de presión, temperatura, nivel y flujo con protocolo HART</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">PRE-SAT</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="pmu+pdc clave interna: pmu_pdc. equipos tipicos:  pmu pdc pdc pmu pmu+pdc pmu y pdc pmu &amp; pdc ">
+        <summary>
+          <span class="nom">PMU+PDC</span>
+          <span class="meta">5 producto · 0 instalado · 10 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: pmu_pdc. Equipos típicos: —</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="PMU+PDC">PMU+PDC<i>copiar</i></button><button class="kw cat" data-kw="PMU_PDC">PMU_PDC<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="pmu pdc">pmu pdc<i>copiar</i></button><button class="kw prod" data-kw="pdc pmu">pdc pmu<i>copiar</i></button><button class="kw prod" data-kw="pmu+pdc">pmu+pdc<i>copiar</i></button><button class="kw prod" data-kw="pmu y pdc">pmu y pdc<i>copiar</i></button><button class="kw prod" data-kw="pmu &amp; pdc">pmu &amp; pdc<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pmu pdc&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pmu pdc&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pmu pdc&quot; licitación Chile</code><button class="cp" data-kw="&quot;pmu pdc&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pdc pmu&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pdc pmu&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pdc pmu&quot; licitación Chile</code><button class="cp" data-kw="&quot;pdc pmu&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pmu+pdc&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pmu+pdc&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pmu+pdc&quot; licitación Chile</code><button class="cp" data-kw="&quot;pmu+pdc&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pmu y pdc&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pmu y pdc&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pmu y pdc&quot; licitación Chile</code><button class="cp" data-kw="&quot;pmu y pdc&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pmu &amp; pdc&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pmu &amp; pdc&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pmu &amp; pdc&quot; licitación Chile</code><button class="cp" data-kw="&quot;pmu &amp; pdc&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="pdc clave interna: pdc. equipos tipicos: licencia pdc corporativo/local, servidor pdc (tramos), kronos, elpros pdc ">
+        <summary>
+          <span class="nom">PDC</span>
+          <span class="meta">1 producto · 0 instalado · 2 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: pdc. Equipos típicos: Licencia PDC Corporativo/Local, Servidor PDC (tramos), Kronos, ELPROS</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="PDC">PDC<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="pdc">pdc<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;pdc&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;pdc&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;pdc&quot; licitación Chile</code><button class="cp" data-kw="&quot;pdc&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="rtu clave interna: rtu. equipos tipicos: orion sx/lx+/mx/io (tarjetas io), switch hermes 2000, gps, medidor ion 9200, importacion rtu orion ge d20 urt d20 rtu d20 wesdac d200 transdata tda rtu560 sinaut">
+        <summary>
+          <span class="nom">RTU</span>
+          <span class="meta">2 producto · 8 instalado · 20 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: rtu. Equipos típicos: Orion SX/LX+/MX/IO (tarjetas IO), Switch Hermes 2000, GPS, Medidor ION 9200, Importación</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="RTU">RTU<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="rtu">rtu<i>copiar</i></button><button class="kw prod" data-kw="orion">orion<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="GE D20">GE D20<i>copiar</i></button><button class="kw old" data-kw="URT D20">URT D20<i>copiar</i></button><button class="kw old" data-kw="RTU D20">RTU D20<i>copiar</i></button><button class="kw old" data-kw="WESDAC">WESDAC<i>copiar</i></button><button class="kw old" data-kw="D200">D200<i>copiar</i></button><button class="kw old" data-kw="TransData TDA">TransData TDA<i>copiar</i></button><button class="kw old" data-kw="RTU560">RTU560<i>copiar</i></button><button class="kw old" data-kw="SINAUT">SINAUT<i>copiar</i></button></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;rtu&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;rtu&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;rtu&quot; licitación Chile</code><button class="cp" data-kw="&quot;rtu&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;orion&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;orion&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;orion&quot; licitación Chile</code><button class="cp" data-kw="&quot;orion&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;GE D20&quot; coordinador.cl</code><button class="cp" data-kw="&quot;GE D20&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;GE D20&quot; Chile licitación</code><button class="cp" data-kw="&quot;GE D20&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;URT D20&quot; coordinador.cl</code><button class="cp" data-kw="&quot;URT D20&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;URT D20&quot; Chile licitación</code><button class="cp" data-kw="&quot;URT D20&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;RTU D20&quot; coordinador.cl</code><button class="cp" data-kw="&quot;RTU D20&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;RTU D20&quot; Chile licitación</code><button class="cp" data-kw="&quot;RTU D20&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;WESDAC&quot; coordinador.cl</code><button class="cp" data-kw="&quot;WESDAC&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;WESDAC&quot; Chile licitación</code><button class="cp" data-kw="&quot;WESDAC&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;D200&quot; coordinador.cl</code><button class="cp" data-kw="&quot;D200&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;D200&quot; Chile licitación</code><button class="cp" data-kw="&quot;D200&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;TransData TDA&quot; coordinador.cl</code><button class="cp" data-kw="&quot;TransData TDA&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;TransData TDA&quot; Chile licitación</code><button class="cp" data-kw="&quot;TransData TDA&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;RTU560&quot; coordinador.cl</code><button class="cp" data-kw="&quot;RTU560&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;RTU560&quot; Chile licitación</code><button class="cp" data-kw="&quot;RTU560&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SINAUT&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SINAUT&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SINAUT&quot; Chile licitación</code><button class="cp" data-kw="&quot;SINAUT&quot; Chile licitación">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F11</span></td>
+              <td>A usina tem mais de 50 anos e quase todos os sistemas de controle são obsoletos.<div class="alt">O fornecedor também indicou que não era mais possível nos oferecer suporte devido à obsolescência do sistema de controle</div></td>
+              <td>migración del sistema de control sin parar la operación</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">PRE-FAT</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="scada clave interna: scada. equipos tipicos: orion mx, orion io, gps, switch scada foxboro i/a bailey infi 90 invensys mark v mark vi">
+        <summary>
+          <span class="nom">SCADA</span>
+          <span class="meta">1 producto · 5 instalado · 12 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: scada. Equipos típicos: Orion MX, Orion IO, GPS, Switch</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="SCADA">SCADA<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="scada">scada<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Foxboro I/A">Foxboro I/A<i>copiar</i></button><button class="kw old" data-kw="Bailey INFI 90">Bailey INFI 90<i>copiar</i></button><button class="kw old" data-kw="Invensys">Invensys<i>copiar</i></button><button class="kw old" data-kw="Mark V">Mark V<i>copiar</i></button><button class="kw old" data-kw="Mark VI">Mark VI<i>copiar</i></button></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;scada&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;scada&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;scada&quot; licitación Chile</code><button class="cp" data-kw="&quot;scada&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Foxboro I/A&quot; coordinador.cl</code><button class="cp" data-kw="&quot;Foxboro I/A&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;Foxboro I/A&quot; Chile licitación</code><button class="cp" data-kw="&quot;Foxboro I/A&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Bailey INFI 90&quot; coordinador.cl</code><button class="cp" data-kw="&quot;Bailey INFI 90&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;Bailey INFI 90&quot; Chile licitación</code><button class="cp" data-kw="&quot;Bailey INFI 90&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Invensys&quot; coordinador.cl</code><button class="cp" data-kw="&quot;Invensys&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;Invensys&quot; Chile licitación</code><button class="cp" data-kw="&quot;Invensys&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Mark V&quot; coordinador.cl</code><button class="cp" data-kw="&quot;Mark V&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;Mark V&quot; Chile licitación</code><button class="cp" data-kw="&quot;Mark V&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Mark VI&quot; coordinador.cl</code><button class="cp" data-kw="&quot;Mark VI&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;Mark VI&quot; Chile licitación</code><button class="cp" data-kw="&quot;Mark VI&quot; Chile licitación">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F11</span></td>
+              <td>A usina tem mais de 50 anos e quase todos os sistemas de controle são obsoletos.<div class="alt">O fornecedor também indicou que não era mais possível nos oferecer suporte devido à obsolescência do sistema de controle</div></td>
+              <td>migración del sistema de control sin parar la operación</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">CIBERSEGURIDAD (CIP-002..009), MANTENIMIENTO REMOTO/PREVENTIVO/CORRECTIVO</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="slrp clave interna: slrp. equipos tipicos:  slrp sel-2032 sel rtu">
+        <summary>
+          <span class="nom">SLRP</span>
+          <span class="meta">1 producto · 2 instalado · 6 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: slrp. Equipos típicos: —</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="SLRP">SLRP<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="slrp">slrp<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="SEL-2032">SEL-2032<i>copiar</i></button><button class="kw old" data-kw="SEL RTU">SEL RTU<i>copiar</i></button></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;slrp&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;slrp&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;slrp&quot; licitación Chile</code><button class="cp" data-kw="&quot;slrp&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SEL-2032&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SEL-2032&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SEL-2032&quot; Chile licitación</code><button class="cp" data-kw="&quot;SEL-2032&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SEL RTU&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SEL RTU&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SEL RTU&quot; Chile licitación</code><button class="cp" data-kw="&quot;SEL RTU&quot; Chile licitación">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">VISITA DE CONFIGURACIÓN PROTECCIONES</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="edac clave interna: edac. equipos tipicos: gps kronos (s2) edac ">
+        <summary>
+          <span class="nom">EDAC</span>
+          <span class="meta">1 producto · 0 instalado · 2 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: edac. Equipos típicos: GPS Kronos (S2)</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="EDAC">EDAC<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="edac">edac<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;edac&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;edac&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;edac&quot; licitación Chile</code><button class="cp" data-kw="&quot;edac&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">IMPLEMENTACIÓN CIBERSEGURIDAD, CIP-002..011, ACTUALIZACIÓN DOC NERC-CIP</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="edag clave interna: edag. equipos tipicos: gps, orion mx, orion i/o edag edagx ">
+        <summary>
+          <span class="nom">EDAG</span>
+          <span class="meta">2 producto · 0 instalado · 4 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: edag. Equipos típicos: GPS, Orion MX, Orion I/O</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="EDAG">EDAG<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="edag">edag<i>copiar</i></button><button class="kw prod" data-kw="edagx">edagx<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;edag&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;edag&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;edag&quot; licitación Chile</code><button class="cp" data-kw="&quot;edag&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;edagx&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;edagx&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;edagx&quot; licitación Chile</code><button class="cp" data-kw="&quot;edagx&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="gps clave interna: gps. equipos tipicos: kronos, importacion gps kronos ">
+        <summary>
+          <span class="nom">GPS</span>
+          <span class="meta">2 producto · 0 instalado · 4 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: gps. Equipos típicos: Kronos, Importación</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="GPS">GPS<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="gps">gps<i>copiar</i></button><button class="kw prod" data-kw="kronos">kronos<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;gps&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;gps&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;gps&quot; licitación Chile</code><button class="cp" data-kw="&quot;gps&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;kronos&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;kronos&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;kronos&quot; licitación Chile</code><button class="cp" data-kw="&quot;kronos&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="synchroteq clave interna: synchroteq. equipos tipicos: (vizimax synchroteq) synchroteq synchro ">
+        <summary>
+          <span class="nom">SynchroTeq</span>
+          <span class="meta">2 producto · 0 instalado · 4 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: synchroteq. Equipos típicos: (Vizimax SynchroTeq)</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="SynchroTeq">SynchroTeq<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="synchroteq">synchroteq<i>copiar</i></button><button class="kw prod" data-kw="synchro">synchro<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;synchroteq&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;synchroteq&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;synchroteq&quot; licitación Chile</code><button class="cp" data-kw="&quot;synchroteq&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;synchro&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;synchro&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;synchro&quot; licitación Chile</code><button class="cp" data-kw="&quot;synchro&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="repro clave interna: repro. equipos tipicos: novatech (reposicion/upgrade orion) repro reposicion ">
+        <summary>
+          <span class="nom">Repro</span>
+          <span class="meta">2 producto · 0 instalado · 4 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: repro. Equipos típicos: NOVATECH (reposición/upgrade Orion)</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Repro">Repro<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="repro">repro<i>copiar</i></button><button class="kw prod" data-kw="reposicion">reposicion<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;repro&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;repro&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;repro&quot; licitación Chile</code><button class="cp" data-kw="&quot;repro&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;reposicion&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;reposicion&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;reposicion&quot; licitación Chile</code><button class="cp" data-kw="&quot;reposicion&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F04</span></td>
+              <td>Accesorios y Repuestos<div class="alt">repuestos, plazo de entrega</div></td>
+              <td>stock de repuestos y obsolescencia programada del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F11</span></td>
+              <td>A usina tem mais de 50 anos e quase todos os sistemas de controle são obsoletos.<div class="alt">O fornecedor também indicou que não era mais possível nos oferecer suporte devido à obsolescência do sistema de controle</div></td>
+              <td>migración del sistema de control sin parar la operación</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="reconectadores clave interna: reconectadores. equipos tipicos: orion mx, kronos 2p reconectador reconectadores concentrador concentradores ">
+        <summary>
+          <span class="nom">Reconectadores</span>
+          <span class="meta">4 producto · 0 instalado · 8 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: reconectadores. Equipos típicos: Orion MX, Kronos 2P</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Reconectadores">Reconectadores<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="reconectador">reconectador<i>copiar</i></button><button class="kw prod" data-kw="reconectadores">reconectadores<i>copiar</i></button><button class="kw prod" data-kw="concentrador">concentrador<i>copiar</i></button><button class="kw prod" data-kw="concentradores">concentradores<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;reconectador&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;reconectador&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;reconectador&quot; licitación Chile</code><button class="cp" data-kw="&quot;reconectador&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;reconectadores&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;reconectadores&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;reconectadores&quot; licitación Chile</code><button class="cp" data-kw="&quot;reconectadores&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;concentrador&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;concentrador&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;concentrador&quot; licitación Chile</code><button class="cp" data-kw="&quot;concentrador&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;concentradores&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;concentradores&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;concentradores&quot; licitación Chile</code><button class="cp" data-kw="&quot;concentradores&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F11</span></td>
+              <td>A usina tem mais de 50 anos e quase todos os sistemas de controle são obsoletos.<div class="alt">O fornecedor também indicou que não era mais possível nos oferecer suporte devido à obsolescência do sistema de controle</div></td>
+              <td>migración del sistema de control sin parar la operación</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="ciberseguridad clave interna: ciberseguridad. equipos tipicos:  ciberseguridad ciber nerc cip ">
+        <summary>
+          <span class="nom">Ciberseguridad</span>
+          <span class="meta">4 producto · 0 instalado · 8 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: ciberseguridad. Equipos típicos: —</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Ciberseguridad">Ciberseguridad<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="ciberseguridad">ciberseguridad<i>copiar</i></button><button class="kw prod" data-kw="ciber">ciber<i>copiar</i></button><button class="kw prod" data-kw="nerc">nerc<i>copiar</i></button><button class="kw prod" data-kw="cip">cip<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;ciberseguridad&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;ciberseguridad&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;ciberseguridad&quot; licitación Chile</code><button class="cp" data-kw="&quot;ciberseguridad&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;ciber&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;ciber&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;ciber&quot; licitación Chile</code><button class="cp" data-kw="&quot;ciber&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;nerc&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;nerc&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;nerc&quot; licitación Chile</code><button class="cp" data-kw="&quot;nerc&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;cip&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;cip&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;cip&quot; licitación Chile</code><button class="cp" data-kw="&quot;cip&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">IMPLEMENTACIÓN CIBERSEGURIDAD, CIP-002..010, ACTUALIZACIÓN DOC NERC-CIP</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="protecciones clave interna: protecciones. equipos tipicos:  proteccion protecciones proteccionista ecap diferencial sepam siprotec relay rele parametrizacion sel-2032 sel rtu">
+        <summary>
+          <span class="nom">Protecciones</span>
+          <span class="meta">10 producto · 2 instalado · 24 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: protecciones. Equipos típicos: —</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Protecciones">Protecciones<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="proteccion">proteccion<i>copiar</i></button><button class="kw prod" data-kw="protecciones">protecciones<i>copiar</i></button><button class="kw prod" data-kw="proteccionista">proteccionista<i>copiar</i></button><button class="kw prod" data-kw="ecap">ecap<i>copiar</i></button><button class="kw prod" data-kw="diferencial">diferencial<i>copiar</i></button><button class="kw prod" data-kw="sepam">sepam<i>copiar</i></button><button class="kw prod" data-kw="siprotec">siprotec<i>copiar</i></button><button class="kw prod" data-kw="relay">relay<i>copiar</i></button><button class="kw prod" data-kw="rele">rele<i>copiar</i></button><button class="kw prod" data-kw="parametrizacion">parametrizacion<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="SEL-2032">SEL-2032<i>copiar</i></button><button class="kw old" data-kw="SEL RTU">SEL RTU<i>copiar</i></button></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;proteccion&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;proteccion&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;proteccion&quot; licitación Chile</code><button class="cp" data-kw="&quot;proteccion&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;protecciones&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;protecciones&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;protecciones&quot; licitación Chile</code><button class="cp" data-kw="&quot;protecciones&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;proteccionista&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;proteccionista&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;proteccionista&quot; licitación Chile</code><button class="cp" data-kw="&quot;proteccionista&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;ecap&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;ecap&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;ecap&quot; licitación Chile</code><button class="cp" data-kw="&quot;ecap&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;diferencial&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;diferencial&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;diferencial&quot; licitación Chile</code><button class="cp" data-kw="&quot;diferencial&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;sepam&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;sepam&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;sepam&quot; licitación Chile</code><button class="cp" data-kw="&quot;sepam&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;siprotec&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;siprotec&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;siprotec&quot; licitación Chile</code><button class="cp" data-kw="&quot;siprotec&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;relay&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;relay&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;relay&quot; licitación Chile</code><button class="cp" data-kw="&quot;relay&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;rele&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;rele&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;rele&quot; licitación Chile</code><button class="cp" data-kw="&quot;rele&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;parametrizacion&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;parametrizacion&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;parametrizacion&quot; licitación Chile</code><button class="cp" data-kw="&quot;parametrizacion&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SEL-2032&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SEL-2032&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SEL-2032&quot; Chile licitación</code><button class="cp" data-kw="&quot;SEL-2032&quot; Chile licitación">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;SEL RTU&quot; coordinador.cl</code><button class="cp" data-kw="&quot;SEL RTU&quot; coordinador.cl">copiar</button></div><div class="q"><span class="qk">Equipo instalado · Chile</span><code>&quot;SEL RTU&quot; Chile licitación</code><button class="cp" data-kw="&quot;SEL RTU&quot; Chile licitación">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F12</span></td>
+              <td>não foi possível fazer modificações nos parâmetros, resgatar os programas ou adicionar sinais ao sistema<div class="alt">a proposta nos permitiu abrir esse sistema de controle dedicado</div></td>
+              <td>arquitectura abierta: acceso a parámetros, programas y señales sin depender del fabricante</td>
+              <td><span class="ver ok">verificada</span><div class="alt">caso-chuquicamata</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="sitr clave interna: sitr. equipos tipicos:  sitr ">
+        <summary>
+          <span class="nom">SITR</span>
+          <span class="meta">1 producto · 0 instalado · 2 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: sitr. Equipos típicos: —</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="SITR">SITR<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="sitr">sitr<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;sitr&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;sitr&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;sitr&quot; licitación Chile</code><button class="cp" data-kw="&quot;sitr&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="servidor clave interna: servidor. equipos tipicos:  servidor server ">
+        <summary>
+          <span class="nom">Servidor</span>
+          <span class="meta">2 producto · 0 instalado · 4 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Clave interna: servidor. Equipos típicos: —</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Servidor">Servidor<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="servidor">servidor<i>copiar</i></button><button class="kw prod" data-kw="server">server<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><span class="vacio">Sin equipo legacy nombrable para esta línea.</span></div>
+            
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;servidor&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;servidor&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;servidor&quot; licitación Chile</code><button class="cp" data-kw="&quot;servidor&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Documento del CEN</span><code>site:coordinador.cl &quot;server&quot;</code><button class="cp" data-kw="site:coordinador.cl &quot;server&quot;">copiar</button></div><div class="q"><span class="qk">Mercado abierto</span><code>&quot;server&quot; licitación Chile</code><button class="cp" data-kw="&quot;server&quot; licitación Chile">copiar</button></div>
+          </div>
+
+          <div class="blk"><div class="t">5 · Cómo lo nombra el comprador</div>
+          <table><tr><th>ID</th><th>Frase del comprador</th><th>Frase del vendedor</th><th>Estado</th></tr><tr><td><span class="fid">F06</span></td>
+              <td>Sistemas de Control<div class="alt">arquitecturas de control PLC, DCS y SCADA</div></td>
+              <td>DCS ECS-700 y arquitectura de control integrada PLC+DCS+SCADA</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr><tr><td><span class="fid">F07</span></td>
+              <td>Potencia y Control<div class="alt">potencia y control de accionamientos</div></td>
+              <td>control de accionamientos y arranque de motores integrado al DCS</td>
+              <td><span class="ver ok">verificada</span><div class="alt">lic-7000144969</div></td></tr></table></div>
+          <div class="blk"><div class="t">6 · Fases del proyecto</div><p class="pie">Las fases universales de toda línea.</p></div>
+        </div>
+      </details>
+  </section>
+
+  <section class="grupo" style="--acc-grupo:#3fb6ff">
+    <h2>Proceso, planta y automatización SUPCON</h2>
+    
+      <details class="linea" data-buscar="instrumentacion de proceso transmisores de presion, temperatura, nivel y flujo; detectores de gas. cxt cjt sk series w series emf lugb vortex sf20 yhlw turbine sl90 radar 80ghz sl80 sl20 sl10 dmd detector de gas dmc3000 dmc6000 gds foxboro yokogawa centum endress+hauser centum">
+        <summary>
+          <span class="nom">Instrumentación de proceso</span>
+          <span class="meta">16 producto · 4 instalado · 24 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Transmisores de presión, temperatura, nivel y flujo; detectores de gas.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="instrumentos de control">instrumentos de control<i>copiar</i></button><button class="kw cat" data-kw="Instrumentos de Medición, Supervisión, Indicación, Calibración y Control">Instrumentos de Medición, Supervisión, Indicación, Calibración y Control<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="CXT">CXT<i>copiar</i></button><button class="kw prod" data-kw="CJT">CJT<i>copiar</i></button><button class="kw prod" data-kw="SK Series">SK Series<i>copiar</i></button><button class="kw prod" data-kw="W Series">W Series<i>copiar</i></button><button class="kw prod" data-kw="EMF">EMF<i>copiar</i></button><button class="kw prod" data-kw="LUGB vortex">LUGB vortex<i>copiar</i></button><button class="kw prod" data-kw="SF20">SF20<i>copiar</i></button><button class="kw prod" data-kw="YHLW turbine">YHLW turbine<i>copiar</i></button><button class="kw prod" data-kw="SL90 radar 80GHz">SL90 radar 80GHz<i>copiar</i></button><button class="kw prod" data-kw="SL80">SL80<i>copiar</i></button><button class="kw prod" data-kw="SL20">SL20<i>copiar</i></button><button class="kw prod" data-kw="SL10">SL10<i>copiar</i></button><button class="kw prod" data-kw="DMD detector de gas">DMD detector de gas<i>copiar</i></button><button class="kw prod" data-kw="DMC3000">DMC3000<i>copiar</i></button><button class="kw prod" data-kw="DMC6000">DMC6000<i>copiar</i></button><button class="kw prod" data-kw="GDS">GDS<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Foxboro">Foxboro<i>copiar</i></button><button class="kw old" data-kw="Yokogawa CENTUM">Yokogawa CENTUM<i>copiar</i></button><button class="kw old" data-kw="Endress+Hauser">Endress+Hauser<i>copiar</i></button><button class="kw old" data-kw="CENTUM">CENTUM<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: conecta/auditoria-expediente-cliente/SKILL.md, conecta/conecta-prospeccion/references/frases-compra-licitaciones.md, supcon-dcs-ecs700/SKILL.md, supcon-instruments/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;instrumentos de control&quot; licitación</code><button class="cp" data-kw="&quot;instrumentos de control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;instrumentos de control&quot; compra Chile</code><button class="cp" data-kw="&quot;instrumentos de control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;Instrumentos de Medición, Supervisión, Indicación, Calibración y Control&quot; licitación</code><button class="cp" data-kw="&quot;Instrumentos de Medición, Supervisión, Indicación, Calibración y Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Instrumentos de Medición, Supervisión, Indicación, Calibración y Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Instrumentos de Medición, Supervisión, Indicación, Calibración y Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;CXT&quot; licitación Chile</code><button class="cp" data-kw="&quot;CXT&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;CJT&quot; licitación Chile</code><button class="cp" data-kw="&quot;CJT&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SK Series&quot; licitación Chile</code><button class="cp" data-kw="&quot;SK Series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;W Series&quot; licitación Chile</code><button class="cp" data-kw="&quot;W Series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;EMF&quot; licitación Chile</code><button class="cp" data-kw="&quot;EMF&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;LUGB vortex&quot; licitación Chile</code><button class="cp" data-kw="&quot;LUGB vortex&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SF20&quot; licitación Chile</code><button class="cp" data-kw="&quot;SF20&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;YHLW turbine&quot; licitación Chile</code><button class="cp" data-kw="&quot;YHLW turbine&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SL90 radar 80GHz&quot; licitación Chile</code><button class="cp" data-kw="&quot;SL90 radar 80GHz&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SL80&quot; licitación Chile</code><button class="cp" data-kw="&quot;SL80&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SL20&quot; licitación Chile</code><button class="cp" data-kw="&quot;SL20&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SL10&quot; licitación Chile</code><button class="cp" data-kw="&quot;SL10&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;DMD detector de gas&quot; licitación Chile</code><button class="cp" data-kw="&quot;DMD detector de gas&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;DMC3000&quot; licitación Chile</code><button class="cp" data-kw="&quot;DMC3000&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;DMC6000&quot; licitación Chile</code><button class="cp" data-kw="&quot;DMC6000&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;GDS&quot; licitación Chile</code><button class="cp" data-kw="&quot;GDS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Foxboro&quot; planta Chile</code><button class="cp" data-kw="&quot;Foxboro&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Yokogawa CENTUM&quot; planta Chile</code><button class="cp" data-kw="&quot;Yokogawa CENTUM&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Endress+Hauser&quot; planta Chile</code><button class="cp" data-kw="&quot;Endress+Hauser&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;CENTUM&quot; planta Chile</code><button class="cp" data-kw="&quot;CENTUM&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Instrumentos de campo · Montaje y calibración · Loop check · Integración al DCS · Puesta en marcha</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="valvulas y actuadores valvulas de control 6 familias/43 series, posicionador cvp2000, actuador electrico 2sa. cvp2000 ln series lm series sn series vn series cn series bn series 2sa8 actuador electrico 2sa5 actuador electrico x700 hart communicator masoneilan fisher rotork auma biffi bettis">
+        <summary>
+          <span class="nom">Válvulas y actuadores</span>
+          <span class="meta">10 producto · 6 instalado · 22 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Válvulas de control 6 familias/43 series, posicionador CVP2000, actuador eléctrico 2SA.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Accionamiento y Control">Accionamiento y Control<i>copiar</i></button><button class="kw cat" data-kw="válvula de control">válvula de control<i>copiar</i></button><button class="kw cat" data-kw="posicionador">posicionador<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="CVP2000">CVP2000<i>copiar</i></button><button class="kw prod" data-kw="LN series">LN series<i>copiar</i></button><button class="kw prod" data-kw="LM series">LM series<i>copiar</i></button><button class="kw prod" data-kw="SN series">SN series<i>copiar</i></button><button class="kw prod" data-kw="VN series">VN series<i>copiar</i></button><button class="kw prod" data-kw="CN series">CN series<i>copiar</i></button><button class="kw prod" data-kw="BN series">BN series<i>copiar</i></button><button class="kw prod" data-kw="2SA8 actuador eléctrico">2SA8 actuador eléctrico<i>copiar</i></button><button class="kw prod" data-kw="2SA5 actuador eléctrico">2SA5 actuador eléctrico<i>copiar</i></button><button class="kw prod" data-kw="X700 HART communicator">X700 HART communicator<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Masoneilan">Masoneilan<i>copiar</i></button><button class="kw old" data-kw="Fisher">Fisher<i>copiar</i></button><button class="kw old" data-kw="Rotork">Rotork<i>copiar</i></button><button class="kw old" data-kw="AUMA">AUMA<i>copiar</i></button><button class="kw old" data-kw="Biffi">Biffi<i>copiar</i></button><button class="kw old" data-kw="Bettis">Bettis<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: supcon-valves/SKILL.md, tier0-content-population/references/dcs-io-list-parsing.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Accionamiento y Control&quot; licitación</code><button class="cp" data-kw="&quot;Accionamiento y Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Accionamiento y Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Accionamiento y Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;válvula de control&quot; licitación</code><button class="cp" data-kw="&quot;válvula de control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;válvula de control&quot; compra Chile</code><button class="cp" data-kw="&quot;válvula de control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;posicionador&quot; licitación</code><button class="cp" data-kw="&quot;posicionador&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;posicionador&quot; compra Chile</code><button class="cp" data-kw="&quot;posicionador&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;CVP2000&quot; licitación Chile</code><button class="cp" data-kw="&quot;CVP2000&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;LN series&quot; licitación Chile</code><button class="cp" data-kw="&quot;LN series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;LM series&quot; licitación Chile</code><button class="cp" data-kw="&quot;LM series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SN series&quot; licitación Chile</code><button class="cp" data-kw="&quot;SN series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;VN series&quot; licitación Chile</code><button class="cp" data-kw="&quot;VN series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;CN series&quot; licitación Chile</code><button class="cp" data-kw="&quot;CN series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;BN series&quot; licitación Chile</code><button class="cp" data-kw="&quot;BN series&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;2SA8 actuador eléctrico&quot; licitación Chile</code><button class="cp" data-kw="&quot;2SA8 actuador eléctrico&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;2SA5 actuador eléctrico&quot; licitación Chile</code><button class="cp" data-kw="&quot;2SA5 actuador eléctrico&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;X700 HART communicator&quot; licitación Chile</code><button class="cp" data-kw="&quot;X700 HART communicator&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Masoneilan&quot; planta Chile</code><button class="cp" data-kw="&quot;Masoneilan&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Fisher&quot; planta Chile</code><button class="cp" data-kw="&quot;Fisher&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Rotork&quot; planta Chile</code><button class="cp" data-kw="&quot;Rotork&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;AUMA&quot; planta Chile</code><button class="cp" data-kw="&quot;AUMA&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Biffi&quot; planta Chile</code><button class="cp" data-kw="&quot;Biffi&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Bettis&quot; planta Chile</code><button class="cp" data-kw="&quot;Bettis&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Dimensionamiento Cv ISA S75.01 · Selección de trim · Montaje · Calibración de carrera · PST</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="dcs  sistema de control distribuido ecs-700 y ucs nyx. reemplazo de dcs legacy con repuestos en obsolescencia. ecs-700 ucs nyx g5pro ai721-s ao711-h do711-s tua711-di32 foxboro i/a bailey infi 90 invensys honeywell tps honeywell pks c200 honeywell pks c300 yokogawa cs3000 yokogawa centum emerson deltav abb 800xa">
+        <summary>
+          <span class="nom">DCS — sistema de control distribuido</span>
+          <span class="meta">7 producto · 10 instalado · 23 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">ECS-700 y UCS Nyx. Reemplazo de DCS legacy con repuestos en obsolescencia.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Sistemas de Control">Sistemas de Control<i>copiar</i></button><button class="kw cat" data-kw="automatización y control">automatización y control<i>copiar</i></button><button class="kw cat" data-kw="sistema de control distribuido">sistema de control distribuido<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="ECS-700">ECS-700<i>copiar</i></button><button class="kw prod" data-kw="UCS Nyx">UCS Nyx<i>copiar</i></button><button class="kw prod" data-kw="G5Pro">G5Pro<i>copiar</i></button><button class="kw prod" data-kw="AI721-S">AI721-S<i>copiar</i></button><button class="kw prod" data-kw="AO711-H">AO711-H<i>copiar</i></button><button class="kw prod" data-kw="DO711-S">DO711-S<i>copiar</i></button><button class="kw prod" data-kw="TUA711-DI32">TUA711-DI32<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Foxboro I/A">Foxboro I/A<i>copiar</i></button><button class="kw old" data-kw="Bailey INFI 90">Bailey INFI 90<i>copiar</i></button><button class="kw old" data-kw="Invensys">Invensys<i>copiar</i></button><button class="kw old" data-kw="Honeywell TPS">Honeywell TPS<i>copiar</i></button><button class="kw old" data-kw="Honeywell PKS C200">Honeywell PKS C200<i>copiar</i></button><button class="kw old" data-kw="Honeywell PKS C300">Honeywell PKS C300<i>copiar</i></button><button class="kw old" data-kw="Yokogawa CS3000">Yokogawa CS3000<i>copiar</i></button><button class="kw old" data-kw="Yokogawa CENTUM">Yokogawa CENTUM<i>copiar</i></button><button class="kw old" data-kw="Emerson DeltaV">Emerson DeltaV<i>copiar</i></button><button class="kw old" data-kw="ABB 800xA">ABB 800xA<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: conecta/conecta-prospeccion/references/frases-compra-licitaciones.md, frases_codelco.json, supcon-competitive/SKILL.md, supcon-dcs-ecs700/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Sistemas de Control&quot; licitación</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Sistemas de Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;automatización y control&quot; licitación</code><button class="cp" data-kw="&quot;automatización y control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;automatización y control&quot; compra Chile</code><button class="cp" data-kw="&quot;automatización y control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;sistema de control distribuido&quot; licitación</code><button class="cp" data-kw="&quot;sistema de control distribuido&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;sistema de control distribuido&quot; compra Chile</code><button class="cp" data-kw="&quot;sistema de control distribuido&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;ECS-700&quot; licitación Chile</code><button class="cp" data-kw="&quot;ECS-700&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;UCS Nyx&quot; licitación Chile</code><button class="cp" data-kw="&quot;UCS Nyx&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;G5Pro&quot; licitación Chile</code><button class="cp" data-kw="&quot;G5Pro&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;AI721-S&quot; licitación Chile</code><button class="cp" data-kw="&quot;AI721-S&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;AO711-H&quot; licitación Chile</code><button class="cp" data-kw="&quot;AO711-H&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;DO711-S&quot; licitación Chile</code><button class="cp" data-kw="&quot;DO711-S&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;TUA711-DI32&quot; licitación Chile</code><button class="cp" data-kw="&quot;TUA711-DI32&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Foxboro I/A&quot; planta Chile</code><button class="cp" data-kw="&quot;Foxboro I/A&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Bailey INFI 90&quot; planta Chile</code><button class="cp" data-kw="&quot;Bailey INFI 90&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Invensys&quot; planta Chile</code><button class="cp" data-kw="&quot;Invensys&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Honeywell TPS&quot; planta Chile</code><button class="cp" data-kw="&quot;Honeywell TPS&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Honeywell PKS C200&quot; planta Chile</code><button class="cp" data-kw="&quot;Honeywell PKS C200&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Honeywell PKS C300&quot; planta Chile</code><button class="cp" data-kw="&quot;Honeywell PKS C300&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Yokogawa CS3000&quot; planta Chile</code><button class="cp" data-kw="&quot;Yokogawa CS3000&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Yokogawa CENTUM&quot; planta Chile</code><button class="cp" data-kw="&quot;Yokogawa CENTUM&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Emerson DeltaV&quot; planta Chile</code><button class="cp" data-kw="&quot;Emerson DeltaV&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;ABB 800xA&quot; planta Chile</code><button class="cp" data-kw="&quot;ABB 800xA&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Levantamiento de lazos · Migración de base de datos de control · FAT · Cut-over · SAT</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="plc y control hibrido g5pro, g5pro safety, g3smart. control de planta mediana, infraestructura y rtu de proceso. g5pro g5pro safety g3smart gcscontrix gcs webfield t5100 compressor control modicon mark v mark vi siemens s7 pcs7">
+        <summary>
+          <span class="nom">PLC y control híbrido</span>
+          <span class="meta">6 producto · 5 instalado · 17 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">G5Pro, G5Pro Safety, G3Smart. Control de planta mediana, infraestructura y RTU de proceso.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Sistemas de Control">Sistemas de Control<i>copiar</i></button><button class="kw cat" data-kw="automatización y control">automatización y control<i>copiar</i></button><button class="kw cat" data-kw="PLC">PLC<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="G5Pro">G5Pro<i>copiar</i></button><button class="kw prod" data-kw="G5Pro Safety">G5Pro Safety<i>copiar</i></button><button class="kw prod" data-kw="G3Smart">G3Smart<i>copiar</i></button><button class="kw prod" data-kw="GCSContrix">GCSContrix<i>copiar</i></button><button class="kw prod" data-kw="GCS WebField">GCS WebField<i>copiar</i></button><button class="kw prod" data-kw="T5100 compressor control">T5100 compressor control<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Modicon">Modicon<i>copiar</i></button><button class="kw old" data-kw="Mark V">Mark V<i>copiar</i></button><button class="kw old" data-kw="Mark VI">Mark VI<i>copiar</i></button><button class="kw old" data-kw="Siemens S7">Siemens S7<i>copiar</i></button><button class="kw old" data-kw="PCS7">PCS7<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: conecta/auditoria-expediente-cliente/SKILL.md, conecta/conecta-solutions/SKILL.md, frases_codelco.json</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Sistemas de Control&quot; licitación</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Sistemas de Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;automatización y control&quot; licitación</code><button class="cp" data-kw="&quot;automatización y control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;automatización y control&quot; compra Chile</code><button class="cp" data-kw="&quot;automatización y control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;PLC&quot; licitación</code><button class="cp" data-kw="&quot;PLC&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;PLC&quot; compra Chile</code><button class="cp" data-kw="&quot;PLC&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;G5Pro&quot; licitación Chile</code><button class="cp" data-kw="&quot;G5Pro&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;G5Pro Safety&quot; licitación Chile</code><button class="cp" data-kw="&quot;G5Pro Safety&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;G3Smart&quot; licitación Chile</code><button class="cp" data-kw="&quot;G3Smart&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;GCSContrix&quot; licitación Chile</code><button class="cp" data-kw="&quot;GCSContrix&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;GCS WebField&quot; licitación Chile</code><button class="cp" data-kw="&quot;GCS WebField&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;T5100 compressor control&quot; licitación Chile</code><button class="cp" data-kw="&quot;T5100 compressor control&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Modicon&quot; planta Chile</code><button class="cp" data-kw="&quot;Modicon&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Mark V&quot; planta Chile</code><button class="cp" data-kw="&quot;Mark V&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Mark VI&quot; planta Chile</code><button class="cp" data-kw="&quot;Mark VI&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Siemens S7&quot; planta Chile</code><button class="cp" data-kw="&quot;Siemens S7&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;PCS7&quot; planta Chile</code><button class="cp" data-kw="&quot;PCS7&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Programación de control · HMI · FAT · Comisionamiento</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="sis  seguridad instrumentada tcs-500 (sil3/sil4) y tcs-900, hipps. integracion nativa con el dcs. tcs-500 tcs-900 hipps hd5500 barrera de seguridad triconex hima 41q hima 51q safeguard 400">
+        <summary>
+          <span class="nom">SIS — seguridad instrumentada</span>
+          <span class="meta">4 producto · 4 instalado · 14 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">TCS-500 (SIL3/SIL4) y TCS-900, HIPPS. Integración nativa con el DCS.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Sistemas de Control">Sistemas de Control<i>copiar</i></button><button class="kw cat" data-kw="sistema instrumentado de seguridad">sistema instrumentado de seguridad<i>copiar</i></button><button class="kw cat" data-kw="SIS">SIS<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="TCS-500">TCS-500<i>copiar</i></button><button class="kw prod" data-kw="TCS-900">TCS-900<i>copiar</i></button><button class="kw prod" data-kw="HIPPS">HIPPS<i>copiar</i></button><button class="kw prod" data-kw="HD5500 barrera de seguridad">HD5500 barrera de seguridad<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Triconex">Triconex<i>copiar</i></button><button class="kw old" data-kw="HIMA 41q">HIMA 41q<i>copiar</i></button><button class="kw old" data-kw="HIMA 51q">HIMA 51q<i>copiar</i></button><button class="kw old" data-kw="Safeguard 400">Safeguard 400<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: supcon-dcs-ecs700/SKILL.md, supcon-sis-tcs/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Sistemas de Control&quot; licitación</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Sistemas de Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;sistema instrumentado de seguridad&quot; licitación</code><button class="cp" data-kw="&quot;sistema instrumentado de seguridad&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;sistema instrumentado de seguridad&quot; compra Chile</code><button class="cp" data-kw="&quot;sistema instrumentado de seguridad&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;SIS&quot; licitación</code><button class="cp" data-kw="&quot;SIS&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;SIS&quot; compra Chile</code><button class="cp" data-kw="&quot;SIS&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;TCS-500&quot; licitación Chile</code><button class="cp" data-kw="&quot;TCS-500&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;TCS-900&quot; licitación Chile</code><button class="cp" data-kw="&quot;TCS-900&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;HIPPS&quot; licitación Chile</code><button class="cp" data-kw="&quot;HIPPS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;HD5500 barrera de seguridad&quot; licitación Chile</code><button class="cp" data-kw="&quot;HD5500 barrera de seguridad&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Triconex&quot; planta Chile</code><button class="cp" data-kw="&quot;Triconex&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;HIMA 41q&quot; planta Chile</code><button class="cp" data-kw="&quot;HIMA 41q&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;HIMA 51q&quot; planta Chile</code><button class="cp" data-kw="&quot;HIMA 51q&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Safeguard 400&quot; planta Chile</code><button class="cp" data-kw="&quot;Safeguard 400&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Análisis de riesgo HAZOP/LOPA · Especificación SIL · Votación 2oo3 · Proof test · PST</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="gabinetes, i/o remoto y tableros armarios de control, i/o remoto smarteio, proteccion mps5000, switchgear, ciberseguridad de hardware. smarteio uio811-s01 uio812-s01 com812-s mps5000 cm6en switchgear ndw2 ng usb guard inplant defender pro cctv industrial rio mark v mark vi">
+        <summary>
+          <span class="nom">Gabinetes, I/O remoto y tableros</span>
+          <span class="meta">9 producto · 3 instalado · 20 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Armarios de control, I/O remoto SmartEIO, protección MPS5000, switchgear, ciberseguridad de hardware.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Accesorios y Repuestos">Accesorios y Repuestos<i>copiar</i></button><button class="kw cat" data-kw="Sistemas de Control">Sistemas de Control<i>copiar</i></button><button class="kw cat" data-kw="tablero de control">tablero de control<i>copiar</i></button><button class="kw cat" data-kw="armario">armario<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="SmartEIO UIO811-S01">SmartEIO UIO811-S01<i>copiar</i></button><button class="kw prod" data-kw="UIO812-S01">UIO812-S01<i>copiar</i></button><button class="kw prod" data-kw="COM812-S">COM812-S<i>copiar</i></button><button class="kw prod" data-kw="MPS5000">MPS5000<i>copiar</i></button><button class="kw prod" data-kw="CM6EN switchgear">CM6EN switchgear<i>copiar</i></button><button class="kw prod" data-kw="NDW2">NDW2<i>copiar</i></button><button class="kw prod" data-kw="NG USB Guard">NG USB Guard<i>copiar</i></button><button class="kw prod" data-kw="InPlant Defender Pro">InPlant Defender Pro<i>copiar</i></button><button class="kw prod" data-kw="CCTV industrial">CCTV industrial<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="RIO">RIO<i>copiar</i></button><button class="kw old" data-kw="Mark V">Mark V<i>copiar</i></button><button class="kw old" data-kw="Mark VI">Mark VI<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: frases_codelco.json, supcon-hardware/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Accesorios y Repuestos&quot; licitación</code><button class="cp" data-kw="&quot;Accesorios y Repuestos&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Accesorios y Repuestos&quot; compra Chile</code><button class="cp" data-kw="&quot;Accesorios y Repuestos&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;Sistemas de Control&quot; licitación</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Sistemas de Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;tablero de control&quot; licitación</code><button class="cp" data-kw="&quot;tablero de control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;tablero de control&quot; compra Chile</code><button class="cp" data-kw="&quot;tablero de control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;armario&quot; licitación</code><button class="cp" data-kw="&quot;armario&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;armario&quot; compra Chile</code><button class="cp" data-kw="&quot;armario&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;SmartEIO UIO811-S01&quot; licitación Chile</code><button class="cp" data-kw="&quot;SmartEIO UIO811-S01&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;UIO812-S01&quot; licitación Chile</code><button class="cp" data-kw="&quot;UIO812-S01&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;COM812-S&quot; licitación Chile</code><button class="cp" data-kw="&quot;COM812-S&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;MPS5000&quot; licitación Chile</code><button class="cp" data-kw="&quot;MPS5000&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;CM6EN switchgear&quot; licitación Chile</code><button class="cp" data-kw="&quot;CM6EN switchgear&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;NDW2&quot; licitación Chile</code><button class="cp" data-kw="&quot;NDW2&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;NG USB Guard&quot; licitación Chile</code><button class="cp" data-kw="&quot;NG USB Guard&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;InPlant Defender Pro&quot; licitación Chile</code><button class="cp" data-kw="&quot;InPlant Defender Pro&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;CCTV industrial&quot; licitación Chile</code><button class="cp" data-kw="&quot;CCTV industrial&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;RIO&quot; planta Chile</code><button class="cp" data-kw="&quot;RIO&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Mark V&quot; planta Chile</code><button class="cp" data-kw="&quot;Mark V&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Mark VI&quot; planta Chile</code><button class="cp" data-kw="&quot;Mark VI&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Diseño de tablero · Fabricación · Montaje en sala eléctrica · Cableado · FAT de tablero</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="apc y software industrial control avanzado v11.2, supos, tpt/hgt, inplant (pid, lims, eam, oms). apc v11.2 supos tpt hgt inplant pid inplant lims inplant eam inplant oms emerson ams">
+        <summary>
+          <span class="nom">APC y software industrial</span>
+          <span class="meta">8 producto · 1 instalado · 15 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Control avanzado V11.2, supOS, TPT/HGT, InPlant (PID, LIMS, EAM, OMS).</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Sistemas de Control">Sistemas de Control<i>copiar</i></button><button class="kw cat" data-kw="servicios de ingeniería">servicios de ingeniería<i>copiar</i></button><button class="kw cat" data-kw="optimización de procesos">optimización de procesos<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="APC V11.2">APC V11.2<i>copiar</i></button><button class="kw prod" data-kw="supOS">supOS<i>copiar</i></button><button class="kw prod" data-kw="TPT">TPT<i>copiar</i></button><button class="kw prod" data-kw="HGT">HGT<i>copiar</i></button><button class="kw prod" data-kw="InPlant PID">InPlant PID<i>copiar</i></button><button class="kw prod" data-kw="InPlant LIMS">InPlant LIMS<i>copiar</i></button><button class="kw prod" data-kw="InPlant EAM">InPlant EAM<i>copiar</i></button><button class="kw prod" data-kw="InPlant OMS">InPlant OMS<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Emerson AMS">Emerson AMS<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: supcon-competitive/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Sistemas de Control&quot; licitación</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Sistemas de Control&quot; compra Chile</code><button class="cp" data-kw="&quot;Sistemas de Control&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;servicios de ingeniería&quot; licitación</code><button class="cp" data-kw="&quot;servicios de ingeniería&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;servicios de ingeniería&quot; compra Chile</code><button class="cp" data-kw="&quot;servicios de ingeniería&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;optimización de procesos&quot; licitación</code><button class="cp" data-kw="&quot;optimización de procesos&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;optimización de procesos&quot; compra Chile</code><button class="cp" data-kw="&quot;optimización de procesos&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;APC V11.2&quot; licitación Chile</code><button class="cp" data-kw="&quot;APC V11.2&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;supOS&quot; licitación Chile</code><button class="cp" data-kw="&quot;supOS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;TPT&quot; licitación Chile</code><button class="cp" data-kw="&quot;TPT&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;HGT&quot; licitación Chile</code><button class="cp" data-kw="&quot;HGT&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;InPlant PID&quot; licitación Chile</code><button class="cp" data-kw="&quot;InPlant PID&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;InPlant LIMS&quot; licitación Chile</code><button class="cp" data-kw="&quot;InPlant LIMS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;InPlant EAM&quot; licitación Chile</code><button class="cp" data-kw="&quot;InPlant EAM&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;InPlant OMS&quot; licitación Chile</code><button class="cp" data-kw="&quot;InPlant OMS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Emerson AMS&quot; planta Chile</code><button class="cp" data-kw="&quot;Emerson AMS&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Estudio de beneficio · Modelación · Implementación en lazo cerrado · KPI y sostenimiento</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="iiot, condicion y predictivo pride ai (1.566 modos de falla), sensor inalambrico ws300, supos edge. pride ai pride-pd-machine-cloud pride-machine-monitor ws300 sensor vibracion supos edge neurolink edge emerson ams ovation">
+        <summary>
+          <span class="nom">IIoT, condición y predictivo</span>
+          <span class="meta">6 producto · 2 instalado · 14 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">PRIDE AI (1.566 modos de falla), sensor inalámbrico WS300, supOS Edge.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Equipos e Instrumentos de Análisis y Diagnóstico">Equipos e Instrumentos de Análisis y Diagnóstico<i>copiar</i></button><button class="kw cat" data-kw="mantenimiento predictivo">mantenimiento predictivo<i>copiar</i></button><button class="kw cat" data-kw="monitoreo de condición">monitoreo de condición<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="PRIDE AI">PRIDE AI<i>copiar</i></button><button class="kw prod" data-kw="PRIDE-PD-Machine-Cloud">PRIDE-PD-Machine-Cloud<i>copiar</i></button><button class="kw prod" data-kw="PRIDE-Machine-Monitor">PRIDE-Machine-Monitor<i>copiar</i></button><button class="kw prod" data-kw="WS300 sensor vibración">WS300 sensor vibración<i>copiar</i></button><button class="kw prod" data-kw="supOS Edge">supOS Edge<i>copiar</i></button><button class="kw prod" data-kw="NeuroLink edge">NeuroLink edge<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Emerson AMS">Emerson AMS<i>copiar</i></button><button class="kw old" data-kw="Ovation">Ovation<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: conecta/auditoria-expediente-cliente/SKILL.md, supcon-competitive/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; licitación</code><button class="cp" data-kw="&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; compra Chile</code><button class="cp" data-kw="&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;mantenimiento predictivo&quot; licitación</code><button class="cp" data-kw="&quot;mantenimiento predictivo&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;mantenimiento predictivo&quot; compra Chile</code><button class="cp" data-kw="&quot;mantenimiento predictivo&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;monitoreo de condición&quot; licitación</code><button class="cp" data-kw="&quot;monitoreo de condición&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;monitoreo de condición&quot; compra Chile</code><button class="cp" data-kw="&quot;monitoreo de condición&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;PRIDE AI&quot; licitación Chile</code><button class="cp" data-kw="&quot;PRIDE AI&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;PRIDE-PD-Machine-Cloud&quot; licitación Chile</code><button class="cp" data-kw="&quot;PRIDE-PD-Machine-Cloud&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;PRIDE-Machine-Monitor&quot; licitación Chile</code><button class="cp" data-kw="&quot;PRIDE-Machine-Monitor&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;WS300 sensor vibración&quot; licitación Chile</code><button class="cp" data-kw="&quot;WS300 sensor vibración&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;supOS Edge&quot; licitación Chile</code><button class="cp" data-kw="&quot;supOS Edge&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;NeuroLink edge&quot; licitación Chile</code><button class="cp" data-kw="&quot;NeuroLink edge&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Emerson AMS&quot; planta Chile</code><button class="cp" data-kw="&quot;Emerson AMS&quot; planta Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Ovation&quot; planta Chile</code><button class="cp" data-kw="&quot;Ovation&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Catastro de equipos críticos · Instrumentación · Modelos de falla · Alertas y gestión del cambio</p></div>
+        </div>
+      </details>
+      <details class="linea" data-buscar="analizadores y pesaje analizadores en linea hobre, deteccion de gas y pesaje integrado al control. hobre wim compas hobre c-quand gds dmd hobre">
+        <summary>
+          <span class="nom">Analizadores y pesaje</span>
+          <span class="meta">4 producto · 1 instalado · 9 consultas</span>
+        </summary>
+        <div class="cuerpo">
+          <p class="resumen">Analizadores en línea Hobre, detección de gas y pesaje integrado al control.</p>
+
+          <div class="blk">
+            <div class="t">1 · Categoría de compra — esto va al buscador de licitaciones</div>
+            <div class="chips"><button class="kw cat" data-kw="Equipos e Instrumentos de Análisis y Diagnóstico">Equipos e Instrumentos de Análisis y Diagnóstico<i>copiar</i></button><button class="kw cat" data-kw="Pesaje Industrial, Equipos y Accesorios">Pesaje Industrial, Equipos y Accesorios<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">2 · Producto que se especifica en las bases</div>
+            <div class="chips"><button class="kw prod" data-kw="Hobre WIM COMPAS">Hobre WIM COMPAS<i>copiar</i></button><button class="kw prod" data-kw="Hobre C-Quand">Hobre C-Quand<i>copiar</i></button><button class="kw prod" data-kw="GDS">GDS<i>copiar</i></button><button class="kw prod" data-kw="DMD">DMD<i>copiar</i></button></div>
+          </div>
+
+          <div class="blk">
+            <div class="t">3 · Qué tiene instalado hoy el cliente</div>
+            <div class="chips"><button class="kw old" data-kw="Hobre">Hobre<i>copiar</i></button></div>
+            <p class="pie">Fuente de cada marca: supcon-hardware/SKILL.md</p>
+          </div>
+
+          <div class="blk">
+            <div class="t">4 · Consultas listas para lanzar</div>
+            <div class="q"><span class="qk">Categoría de compra</span><code>&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; licitación</code><button class="cp" data-kw="&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; compra Chile</code><button class="cp" data-kw="&quot;Equipos e Instrumentos de Análisis y Diagnóstico&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Categoría de compra</span><code>&quot;Pesaje Industrial, Equipos y Accesorios&quot; licitación</code><button class="cp" data-kw="&quot;Pesaje Industrial, Equipos y Accesorios&quot; licitación">copiar</button></div><div class="q"><span class="qk">Categoría de compra · Chile</span><code>&quot;Pesaje Industrial, Equipos y Accesorios&quot; compra Chile</code><button class="cp" data-kw="&quot;Pesaje Industrial, Equipos y Accesorios&quot; compra Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;Hobre WIM COMPAS&quot; licitación Chile</code><button class="cp" data-kw="&quot;Hobre WIM COMPAS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;Hobre C-Quand&quot; licitación Chile</code><button class="cp" data-kw="&quot;Hobre C-Quand&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;GDS&quot; licitación Chile</code><button class="cp" data-kw="&quot;GDS&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Modelo en bases técnicas</span><code>&quot;DMD&quot; licitación Chile</code><button class="cp" data-kw="&quot;DMD&quot; licitación Chile">copiar</button></div><div class="q"><span class="qk">Equipo instalado</span><code>&quot;Hobre&quot; planta Chile</code><button class="cp" data-kw="&quot;Hobre&quot; planta Chile">copiar</button></div>
+          </div>
+
+          
+          <div class="blk"><div class="t">5 · Fases del proyecto</div><p class="pie">Selección de tecnología analítica · Casa de muestreo · Calibración · Integración</p></div>
+        </div>
+      </details>
+  </section>
+</div>
+
+<footer>
+  Generado por <code>~/orca/projects/KeywordsLicitaciones/todo_en_uno.py</code>, que reúne
+  <code>generar.py</code> (líneas CEN) y <code>generar_supcon.py</code> (líneas SUPCON).
+  Fuentes: el clasificador de líneas de Odoo en <code>~/CONECTA_Proyecto/conecta-agente-cotizador/engine/</code>,
+  el catálogo de partidas en <code>plantillas/bom/CATALOGO_LINEAS.md</code> (536 BOMs reales), las skills de
+  producto SUPCON y <code>frases_codelco.json</code>. Ninguna palabra fue inventada para rellenar la lista;
+  las que no tenían fuente se sacaron.
+</footer>
+</div>
+
+<script>
+// Copiar al portapapeles
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-kw]');
+  if (!b) return;
+  const texto = b.dataset.kw;
+  try { await navigator.clipboard.writeText(texto); } catch (err) { return; }
+  const previo = b.dataset.previo || b.innerHTML;
+  b.dataset.previo = previo;
+  b.classList.add('hecho');
+  b.textContent = 'copiado ✓';
+  setTimeout(() => { b.innerHTML = previo; b.classList.remove('hecho'); }, 1100);
+});
+
+// Filtro
+const entrada = document.getElementById('filtro');
+const ayuda = document.getElementById('ayuda');
+const lineas = [...document.querySelectorAll('details.linea')];
+const grupos = [...document.querySelectorAll('section.grupo')];
+
+entrada.addEventListener('input', () => {
+  const t = entrada.value.trim().toLowerCase()
+    .normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+  let vistos = 0;
+  lineas.forEach(l => {
+    const coincide = !t || l.dataset.buscar.includes(t) || l.innerText.toLowerCase().includes(t);
+    l.classList.toggle('oculto', !coincide);
+    if (coincide) { vistos++; if (t) l.open = true; }
+  });
+  grupos.forEach(g => {
+    const quedan = [...g.querySelectorAll('details.linea')].some(l => !l.classList.contains('oculto'));
+    g.classList.toggle('oculto', !quedan);
+  });
+  ayuda.textContent = t ? `${vistos} línea(s) coinciden con «${entrada.value}».` :
+    'Escriba para filtrar. Cada línea se abre con un clic y cada palabra tiene su botón para copiar.';
+});
+</script>
+</body>
+</html>
